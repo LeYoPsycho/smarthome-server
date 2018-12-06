@@ -50,7 +50,6 @@ app.get('/*', (req, res, next) => {
 app.get('/logout', (req, res, next) => {
 	if (req.session.loggedIn) {
 		req.session.destroy();
-		req.session.loggedIn = false;
 		res.redirect('/login');
 	} else {
 		res.redirect('/login');
