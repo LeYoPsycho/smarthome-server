@@ -1,0 +1,30 @@
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		meta(name='description' content='A smart home controller')
+		title #{title} - Smart your home!
+		link(href='vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+		link(href='css/simple-sidebar.css' rel='stylesheet')
+		link(href='css/main.css' rel='stylesheet')
+	body
+		div(id='wrapper' class='toggled')
+			div(id='sidebar-wrapper')
+				ul(class='sidebar-nav')
+					li(class='sidebar-brand')
+						a(href='#') Smart your home!
+					li
+						a(id='login' href='login') Login
+					li
+						a(id='dashboard' href='dashboard') Dashboard
+					if loggedIn
+						li
+							a(id='logout' href='logout') Logout
+
+		div(id='page-content-wrapper')
+			div(class='container-fluid centerstuff')
+				block content
+
+		script(src='vendor/jquery/jquery.min.js')
+		script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+		script(src='js/main.js')

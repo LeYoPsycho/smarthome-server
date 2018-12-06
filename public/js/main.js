@@ -37,12 +37,13 @@ function login(){
 			},
 			success: response => {
 				console.log("response:", response);
+				window.location.href = window.location.href.replace('login', 'dashboard');
 			},
 			error: error => {
 				console.log("Error", error);
 			}
 		});
 	} else {
-		$('#invalidModal').modal();
+		$('#invalidModal').modal({backdrop: true});
 	};
 }
