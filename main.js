@@ -100,6 +100,7 @@ app.post('/login', (req, res) => {
 				if (!error) {
 					req.session.loggedIn = true;
 					res.send("Query successfull");
+					console.log("Results:", results[0].id);
 				} else {
 					res.send("Error");
 				}

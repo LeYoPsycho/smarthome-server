@@ -18,11 +18,15 @@ html
 							a(id='login' href='login') Login
 					li
 						a(id='dashboard' href='dashboard') Dashboard
+						if loggedIn
+							ul
+								li
+									a(id='create user' href='dashboard/create') Create User
 					if loggedIn
 						li
 							a(id='logout' href='logout') Logout
 
-		div(id='page-content-wrapper')
+		div(id='page-content-wrapper' style='margin-left: 250px')
 			div(class='container-fluid centerstuff')
 				block content
 

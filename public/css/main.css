@@ -21,7 +21,7 @@
 .login-form {
 	width: 350px;
 	height: 357px;
-	margin: 20px auto;
+	margin: auto auto;
 	background-color: white;
 	box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
@@ -63,3 +63,5 @@ form {
 #btn-google {
 	margin-left: 65px;
 }
+
+
