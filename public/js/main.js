@@ -37,7 +37,11 @@ function login(){
 			},
 			success: response => {
 				console.log("response:", response);
-				window.location.href = window.location.href.replace('login', 'dashboard');
+				if (JSON.parse(response).id){
+					window.location.href = window.location.href.replace('login', 'dashboard');
+				} else {
+					alert("Login failed, Server sagt nein");
+				}
 			},
 			error: error => {
 				console.log("Error", error);
