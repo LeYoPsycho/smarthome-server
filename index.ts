@@ -5,9 +5,8 @@ import * as bodyParser from 'body-parser';
 import * as cookieParser from 'cookie-parser';
 import * as mysql from 'mysql';
 import * as path from 'path';
-import {Account, getQueryString} from './sql';
-let credentials = require('./config');
-
+import {Account, getQueryString} from './modules/sql';
+let credentials = require('./modules/config');
 
 //consts
 const app = Express();
@@ -42,7 +41,7 @@ app.get('/', (req, res, next) => {
 
 app.route('/')
 		.get((req, res) => {
-			
+			res.render('dashboard', {loggedIn: true, title: 'Dashboard'});
 		})
 
 

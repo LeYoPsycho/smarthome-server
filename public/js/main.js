@@ -37,7 +37,7 @@ function login(){
 			},
 			success: response => {
 				console.log("response:", response);
-				if (JSON.parse(response).id){
+				if (response.id){
 					window.location.href = window.location.href.replace('login', 'dashboard');
 				} else {
 					alert("Login failed, Server sagt nein");
